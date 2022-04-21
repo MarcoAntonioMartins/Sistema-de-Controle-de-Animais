@@ -1,0 +1,22 @@
+<table border="1px">​
+    <tr>​
+        <td> Nome </td>​
+        <td> nomeDoProprietario</td>​
+        <td> endereco</td>​
+        <td> tipo</td>​
+        <td> raca</td>
+        <td> Editar</td>
+        <td> Excluir</td>​
+    </tr>​
+    {{#each animais}}​
+    <tr>​
+        <td>{{nome}}</td>​
+        <td>{{nomeDoProprietario}}</td>​
+        <td>{{endereco}}</td>
+        <td>{{tipo}}</td>​
+        <td>{{raca}}</td>        
+        <td><a href="animalEdit/{{_id}}">Editar</a></td>
+        <td><a href="animalDelete/{{_id}}">Excluir</a></td>​
+    </tr>​
+    {{/each}}​
+</table>

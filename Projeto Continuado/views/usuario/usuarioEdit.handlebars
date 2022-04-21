@@ -1,0 +1,12 @@
+<form action="/usuarioEdit" method="POST">
+
+    <input type="hidden" name="id" value="{{usuarios._id}}">
+    <p>Login:</p> <input type="text" name="login" value="{{usuarios.login}}">
+    <p>Senha:</p> <input type="text" name="senha" value="{{usuarios.senha}}">
+    <p>Pergunta Secreta:</p> <input type="text" name="pergunta_secreta" value=" {{usuarios.pergunta_secreta}}">
+    <p>Resposta:</p> <input type="text" name="resposta_pergunta" value="{{usuarios.resposta_pergunta}}">
+    <br><br>
+    <input type="submit" value="Editar">
+
+</form>
+
