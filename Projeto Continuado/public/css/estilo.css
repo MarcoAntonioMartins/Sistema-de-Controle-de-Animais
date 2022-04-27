@@ -1,0 +1,90 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #2a82a5;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input {
+    margin: 5px;
+}
+
+input.login {
+    margin: unset;
+    width: -webkit-fill-available;
+    padding: unset;
+    border-radius: 15px;
+    height: 40px;
+    background-color: #ffffffcc;
+    border: unset;
+}
+
+input.login.button {
+    margin-top: 35px;
+    background-color: #fbb000;
+}
+
+
+input.login.button:hover {
+    background-color: #db9900;
+}
+
+
+.tela-login {
+    background-color: #2a82a5;
+}
+
+.div1 {
+    background-color: black;
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.div-login {
+    background-color: #ffffff8c;
+    width: 350px;
+    padding: 25px;
+}
+
+.div-text {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.div-text.login {
+    text-align: left;
+}
+
+.recuperar-senha{
+    text-decoration: none;
+    color: #000000;
+}
+
+.recuperar-senha:hover{
+    color: #fbb000;
+}

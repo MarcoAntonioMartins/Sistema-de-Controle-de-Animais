@@ -6,7 +6,8 @@ const Animal = Schema({
     nomeDoProprietario: { type: String, required: true },
     endereco: { type: String, required: true },
     tipo: { type: String, required: true },
-    raca: { type: String, required: true } 
+    raca: { type: String, required: true },
+    imagem:{ type: String,required:false}     
 });
 
 module.exports = mongoose.model("Animal", Animal)

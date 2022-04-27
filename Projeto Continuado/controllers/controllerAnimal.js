@@ -6,14 +6,16 @@ module.exports = {
         res.render('animal/animalCreate');
     },
     async postCreate(req, res) {
-        const { nome, nomeDoProprietario, endereco, tipo, raca} = req.body;
-        const animal = new Animal({nome, nomeDoProprietario, endereco, tipo, raca});
+        const { nome, nomeDoProprietario, endereco, tipo, raca } = req.body;
+        const imagem = req.imageName;
+        console.log(imagem);
+        const animal = new Animal({ nome, nomeDoProprietario, endereco, tipo, raca, imagem });
         await animal.save();
         res.redirect('/home');
     },
     async getList(req, res) {
         Animal.find().then((animais) => {
-            res.render('animal/animalList', {animais: animais.map(animais => animais.toJSON())});
+            res.render('animal/animalList', { animais: animais.map(animais => animais.toJSON()) });
         });
     },
     async getEdit(req, res) {
@@ -22,7 +24,10 @@ module.exports = {
         });
     },
     async postEdit(req, res) {
-        await Animal.findOneAndUpdate({ _id: req.body.id }, req.body);
+        const { nome, nomeDoProprietario, endereco, tipo, raca } = req.body;
+        const imagem = req.imageName;
+        console.log(imagem);
+        await Animal.findOneAndUpdate({ _id: req.body.id }, { nome, nomeDoProprietario, endereco, tipo, raca, imagem });
         res.redirect('/animalList');
     },
     async getDelete(req, res) {
